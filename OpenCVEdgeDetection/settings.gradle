@@ -1,2 +1,0 @@
-include ':app', ':openCVLibrary343'
-project(':openCVLibrary343').projectDir=new File('D:\\dev\\androidDEV\\work\\openCVtest\\openCVLibrary343')
