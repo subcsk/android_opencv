@@ -1,4 +1,4 @@
-# android_opencv
+# Adnroid OpenCV - Edge Detection
 
 ## 작업환경
 - Android Studio 3.2.1 (https://developer.android.com/studio/)
