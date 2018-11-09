@@ -6,16 +6,16 @@
 cmake_minimum_required(VERSION 3.4.1)
 
 
-# opencv 관련 설정
-set(pathOPENCV D:/dev/androidDEV/opencv-3.4.3-android-sdk/OpenCV-android-sdk)
-set(pathPROJECT D:/dev/androidDEV/work/openCVtest)
+# -- opencv 관련 설정 --
+set(pathOPENCV <<OPENCV_ANDROID_SDK_경로>>/OpenCV-android-sdk)
+set(pathPROJECT <<PROJECT_경로>>/OpenCVEdgeDetection)
 set(pathLIBOPENCV_JAVA ${pathPROJECT}/app/src/main/JniLibs/${ANDROID_ABI}/libopencv_java3.so)
 
 set(CMAKE_VERBOSE_MAKEFILE on)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 
 include_directories(${pathOPENCV}/sdk/native/jni/include)
-# opencv 관련 설정 END
+# -- opencv 관련 설정 END --
 
 
 # Creates and names a library, sets it as either STATIC
@@ -32,10 +32,10 @@ add_library( # Sets the name of the library.
         # Provides a relative path to your source file(s).
         src/main/cpp/native-lib.cpp)
 
-# opencv 관련 설정
+# -- opencv 관련 설정 --
 add_library( lib_opencv SHARED IMPORTED )
 set_target_properties(lib_opencv PROPERTIES IMPORTED_LOCATION ${pathLIBOPENCV_JAVA})
-# opencv 관련 설정 END
+# -- opencv 관련 설정 END --
 
 
 # Searches for a specified prebuilt library and stores the path as a
